@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-	 <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+	 <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
     <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
     <PackageReference Include="EO.Pdf" Version="20.3.63" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />

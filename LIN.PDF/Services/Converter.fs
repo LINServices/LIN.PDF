@@ -5,9 +5,8 @@ open EO.Pdf
 module Conversors =
 
     
-    // Obtiene el tamaño en MB de un array de bytes
+    // Obtiene el tamaño en MB de un array de bytes.
     let sizeOf (array: byte array) = decimal(array.Length) / 1048576m
-
 
     // Imagen a Byte Array
     let imageToByteArray (image: System.Drawing.Image) =
@@ -15,13 +14,12 @@ module Conversors =
         image.Save(stream, System.Drawing.Imaging.ImageFormat.Png)
         stream.ToArray()
 
-
-    // Convertir un HTML a PDF
+    // Convertir un HTML a PDF.
     let convertir (html: string) =
         try
             // Opciones para el motor
             let options = 
-                HtmlToPdfOptions(GeneratePageImages = true, SSLVerificationMode = SSLVerificationMode.None, NoScript = false, NoCache = true)
+                HtmlToPdfOptions(GeneratePageImages = false, SSLVerificationMode = SSLVerificationMode.None, NoScript = false, NoCache = true)
 
             let leftMargin = 0f
             let topMargin = 0f
